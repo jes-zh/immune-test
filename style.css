@@ -58,7 +58,10 @@ body {
 
 h2 { margin: 8px 0 12px; font-size: 20px; }
 .options { display: grid; gap: 12px; }
-.option {
+.option{
+  color: var(--text);           
+  appearance: none;
+  -webkit-appearance: none;
   background: var(--panel);
   border: 1px solid rgba(255,255,255,.08);
   padding: 14px 16px;
@@ -66,6 +69,7 @@ h2 { margin: 8px 0 12px; font-size: 20px; }
   cursor: pointer;
   transition: transform .06s ease, border-color .15s ease, background .15s ease;
 }
+
 .option:hover { transform: translateY(-1px); border-color: rgba(255,255,255,.18); }
 .option.selected { outline: 2px solid var(--brand); background: #121423; }
 
