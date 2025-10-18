@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>免疫细胞人格测试</title>
+  <meta name="description" content="一个有趣的免疫细胞人格测试：看看你更像巨噬细胞、B 细胞、血小板、嗜酸性粒细胞还是调节性 T 细胞。" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>🧪 免疫细胞人格测试</h1>
+      <p class="subtitle">回答 5 个问题，看看你最像哪类免疫细胞</p>
+    </header>
+
+    <main id="main" class="card">
+      <section id="intro" class="section visible">
+        <p class="muted">题目共 5 题，每题从 A~E 选一个最符合你的选项。</p>
+        <button id="startBtn" class="btn primary">开始测试</button>
+      </section>
+
+      <section id="quiz" class="section">
+        <div class="quiz-header">
+          <div id="progressText">题目 1 / 5</div>
+          <div class="progress"><div id="progressBar"></div></div>
+        </div>
+        <h2 id="questionText"></h2>
+        <div id="options" class="options"></div>
+        <div class="actions">
+          <button id="prevBtn" class="btn ghost" disabled>上一步</button>
+          <button id="nextBtn" class="btn">下一题</button>
+          <button id="submitBtn" class="btn primary" style="display:none">查看结果</button>
+        </div>
+      </section>
+
+      <section id="result" class="section">
+        <h2>你的免疫细胞人格是：</h2>
+        <div id="resultBadge" class="badge"></div>
+        <p id="resultDesc" class="desc"></p>
+        <div class="result-actions">
+          <button id="copyBtn" class="btn">复制结果</button>
+          <button id="retryBtn" class="btn ghost">重新测试</button>
+        </div>
+        <details class="details">
+          <summary>查看各细胞得分</summary>
+          <ul id="scoreList" class="score-list"></ul>
+        </details>
+        <p class="muted small">* 本测试仅供娱乐，不代表医学结论。</p>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <small>© 2025 免疫细胞人格测试 · 由 HTML/CSS/JS 构建，可部署到 GitHub Pages</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
